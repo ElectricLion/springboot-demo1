@@ -29,7 +29,7 @@ SpringBootDemo1中可以了解：
        1.在一个使用@Configuration注解的配置类继承SpringBootServletInitializer类
        2.覆盖configure()方法
        3.在pom.xml 文件中添加tomcat依赖。scope 设置为provided即项目打包时，就排除掉这个内嵌的tomcat。
-       4.将打好的war包，复制到外部的tomcat的Webapps文件夹下面，然后解压该war包，最后删除源war包。
+       4.将打好的war包，复制到外部的tomcat的Webapps文件夹的ROOT文件夹下面，然后解压该war包，最后删除源war包。
      
         
     
