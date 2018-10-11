@@ -1,0 +1,4 @@
+在SpringBoot中使用事务：
+        1.导入依赖jdbc的依赖jar包，然后SpringBoot 就可以完成自动配置
+        2.使用@Transaction 注解（在类上表示这个类都开启事务，用在方法上表示这个方法开启事务）
+
