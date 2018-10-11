@@ -1,25 +1,25 @@
 SpringBootDemo1中可以了解：
-   1.SpringBoot是如何进行自动配置的？
+  1.SpringBoot是如何进行自动配置的？
         在导入依赖jar包时，SpringBoot 会自动完成自动配置。也可以取消掉指定的自动配置。使用Java配置完成自定义配置。
         
-   2.SpringBoot中怎么使用Java 配置？
+  2.SpringBoot中怎么使用Java 配置？
         抛弃过往的xml文件配置，使用在Java类中使用@Configuration和@Bean来创建配置文件和声明Bean组件。
-   3.如何添加拦截器？
+  3.如何添加拦截器？
           1.实现HandlerInterceptor 接口
           2.使用@Component,将这个HandlerInterceptor实例注册成一个Bean组件交给IOC容器进行管理。在IOC容器中@Autowired 这类注解才会生效，
             所以为了使拦截器实现类中的自动注解生效，就必须要将拦截器实例交给IOC容器来创建和管理。
           3.创建一个配置类，实现WebMvcConfigurer 接口，重写addInterceptors（）方法，并设置拦截请求路径，完成拦截器添加。
             
-   4.SpringBoot是怎么进行自动扫描注解的和启动SpringBoot项目的？
+  4.SpringBoot是怎么进行自动扫描注解的和启动SpringBoot项目的？
      SpringBoot是由使用@SpringBootApplication的类做为启动类的。启动SpringBoot框架只需运行启动类中的main方法。还有可以使用maven命令 springboot:run.
      SpringBoot是从该启动类所在目录以及其子目录，迭代进行自动扫描注解
-   5.SpringBoot中如何加载属性文件？
+  5.SpringBoot中如何加载属性文件？
          通过@PropertySource和@Value注解来加载properties属性文件的。application.properties 是默认自动加载的。
-   6.在application.properties 中配置？
+  6.在application.properties 中配置？
       1.配置该项目的端口号
       2.配置DispatchServlet的拦截请求路径
       3.配置视图解析器
-   7.在SpringBoot 中事务的使用？
+  7.在SpringBoot 中事务的使用？
        1.导入jdbc 的jar包，SpringBoot 就会完成自动配置
        2.在类上或方法上使用@Transaction为该类的所有方法或指定方法添加事务管理。
      
